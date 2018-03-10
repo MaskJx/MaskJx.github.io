@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="夜慕 Blog&#39;s">
 <meta property="og:description" content="前言    之前就一直想搭建一个个人技术博客的网站了，但是那时候接触的东西不多，后来看大佬的博客才了解了Hexo，但是一直没有定下决心去看官方文档，于是搭建博客网站的想法再一次不了了之，这次放假之余的闲暇的时候起了搭建博客的想法（windows下），而且之所以写这篇文章是因为自己走了比较多的坑，浪费了比较多的时间，所有把自己搭建的过程写下来，免得自己过后遗忘。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-10T07:33:33.590Z">
+<meta property="og:updated_time" content="2018-03-10T07:44:09.981Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GitHub + Hexo（Next主题）搭建博客">
 <meta name="twitter:description" content="前言    之前就一直想搭建一个个人技术博客的网站了，但是那时候接触的东西不多，后来看大佬的博客才了解了Hexo，但是一直没有定下决心去看官方文档，于是搭建博客网站的想法再一次不了了之，这次放假之余的闲暇的时候起了搭建博客的想法（windows下），而且之所以写这篇文章是因为自己走了比较多的坑，浪费了比较多的时间，所有把自己搭建的过程写下来，免得自己过后遗忘。">
@@ -450,9 +450,9 @@ A            @            192.30.252.154
 <p>&emsp;先将avatar字段前的#删除，然后再其后写上头像的目录位置或者链接。<br>&emsp;将头像图片保存再主题目录下的 <code>source/images</code> 文件夹，也可以存放在<code>source/upload_images</code>的文件夹(没有自己新建)，也可以将自己的头像图片，保存在百度网盘或者图床，然后将对应的url地址复制过来，添加在<code>avatar</code>字段后即可。</p>
 <h3 id="添加RSS"><a href="#添加RSS" class="headerlink" title="添加RSS"></a>添加RSS</h3><p>直接在Hexo根目录执行如下指令即可：</p>
 <pre><code>npm install hexo-generator-feed --save    
-</code></pre><p>参考 <a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">NexT官方文档</a></p>
+</code></pre><p>参考 <a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">NexT使用文档</a></p>
 <h3 id="添加站内搜索"><a href="#添加站内搜索" class="headerlink" title="添加站内搜索"></a>添加站内搜索</h3><blockquote>
-<p>这里是使用Algolia，此特性在版本5.1.0以上引入，要使用此功能请确保所使用的 NexT 版本在此之后，可以参考 <a href="http://theme-next.iissnan.com/third-party-services.html#swiftype" target="_blank" rel="noopener">NexT官方文档</a>，官方文档有非常详细的步骤，笔者就不细说了。<br><strong>NexT版本</strong>：查看主题配置文件，下拉到最后可以查看<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Theme version</span></span><br><span class="line">version: 5.1.4</span><br></pre></td></tr></table></figure></p>
+<p>这里是使用Algolia，此特性在版本5.1.0以上引入，要使用此功能请确保所使用的 NexT 版本在此之后，可以参考 <a href="http://theme-next.iissnan.com/third-party-services.html#swiftype" target="_blank" rel="noopener">NexT使用文档</a>，官方文档有非常详细的步骤，笔者就不细说了。<br><strong>NexT版本</strong>：查看主题配置文件，下拉到最后可以查看<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Theme version</span></span><br><span class="line">version: 5.1.4</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <h3 id="实现点击出现桃心效果"><a href="#实现点击出现桃心效果" class="headerlink" title="实现点击出现桃心效果"></a>实现点击出现桃心效果</h3><p>在/themes/next/source/js/src文件目录下新建love.js文件，将如下代码添加到love.js<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!<span class="keyword">function</span>(e,t,a)&#123;<span class="keyword">function</span> <span class="function"><span class="title">r</span></span>()&#123;<span class="keyword">for</span>(var e=0;e&lt;n.length;e++)n[e].alpha&lt;=0?(t.body.removeChild(n[e].el),n.splice(e,1)):(n[e].y--,n[e].scale+=.004,n[e].alpha-=.013,n[e].el.style.cssText=<span class="string">"left:"</span>+n[e].x+<span class="string">"px;top:"</span>+n[e].y+<span class="string">"px;opacity:"</span>+n[e].alpha+<span class="string">";transform:scale("</span>+n[e].scale+<span class="string">","</span>+n[e].scale+<span class="string">") rotate(45deg);background:"</span>+n[e].color+<span class="string">";z-index:99999"</span>);requestAnimationFrame(r)&#125;var n=[];e.requestAnimationFrame=e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||<span class="keyword">function</span>(e)&#123;setTimeout(e,1e3/60)&#125;,<span class="keyword">function</span>(e)&#123;var a=t.createElement(<span class="string">"style"</span>);a.type=<span class="string">"text/css"</span>;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(<span class="string">"head"</span>)[0].appendChild(a)&#125;(<span class="string">".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"</span>),<span class="function"><span class="title">function</span></span>()&#123;var a=<span class="string">"function"</span>==typeof e.onclick&amp;&amp;e.onclick;e.onclick=<span class="keyword">function</span>(e)&#123;a&amp;&amp;a(),<span class="keyword">function</span>(e)&#123;var a=t.createElement(<span class="string">"div"</span>);a.className=<span class="string">"heart"</span>,n.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:<span class="string">"rgb("</span>+~~(255*Math.random())+<span class="string">","</span>+~~(255*Math.random())+<span class="string">","</span>+~~(255*Math.random())+<span class="string">")"</span>&#125;),t.body.appendChild(a)&#125;(e)&#125;&#125;(),r()&#125;(window,document);</span><br></pre></td></tr></table></figure></p>
 <p>然后打开\themes\next\layout_layout.swig文件，在末尾（在前面引用会出现找不到的BUG），在<code>&lt;/body&gt;&lt;/html&gt;</code>之前添加如下代码：</p>
@@ -725,6 +725,10 @@ code {
                 
                   <li class="links-of-blogroll-item">
                     <a href="https://github.com/Maskjx" title="GitHub" target="_blank">GitHub</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://hamal.cc/" title="搬运工" target="_blank">搬运工</a>
                   </li>
                 
               </ul>
