@@ -73,8 +73,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="夜慕 Blog's" type="application/atom+xml" />
 
@@ -83,17 +81,17 @@
 
 
 
-<meta name="description" content="学而不思则罔，思而不学则殆。">
+<meta name="description" content="AV.initialize(&quot;AcD1e2wdniPjC43e8IrbBQFw-gzGzoHsz&quot;, &quot;SleHkf5njrDGWnBCLvPbJjMR&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);//表名   query.notEqualTo(&apos;id&apos;,0); //id不为">
 <meta property="og:type" content="website">
 <meta property="og:title" content="夜慕 Blog&#39;s">
-<meta property="og:url" content="http://maskjx.me/tags/index.html">
+<meta property="og:url" content="http://maskjx.me/ranking/index.html">
 <meta property="og:site_name" content="夜慕 Blog&#39;s">
-<meta property="og:description" content="学而不思则罔，思而不学则殆。">
+<meta property="og:description" content="AV.initialize(&quot;AcD1e2wdniPjC43e8IrbBQFw-gzGzoHsz&quot;, &quot;SleHkf5njrDGWnBCLvPbJjMR&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);//表名   query.notEqualTo(&apos;id&apos;,0); //id不为">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-10T03:25:50.237Z">
+<meta property="og:updated_time" content="2018-04-12T04:05:12.312Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="夜慕 Blog&#39;s">
-<meta name="twitter:description" content="学而不思则罔，思而不学则殆。">
+<meta name="twitter:description" content="AV.initialize(&quot;AcD1e2wdniPjC43e8IrbBQFw-gzGzoHsz&quot;, &quot;SleHkf5njrDGWnBCLvPbJjMR&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);//表名   query.notEqualTo(&apos;id&apos;,0); //id不为">
 
 
 
@@ -123,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://maskjx.me/tags/"/>
+  <link rel="canonical" href="http://maskjx.me/ranking/"/>
 
 
 
 
 
-  <title>标签 | 夜慕 Blog's</title>
+  <title> | 夜慕 Blog's</title>
   
 
 
@@ -299,14 +297,30 @@
       <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 1 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/博客系列/" style="font-size: 12px; color: #ccc">博客系列</a>
-            </div>
-          </div>
+          <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("AcD1e2wdniPjC43e8IrbBQFw-gzGzoHsz", "SleHkf5njrDGWnBCLvPbJjMR");</script>
+<script type="text/javascript">
+  var time=0
+  var title=""
+  var url=""
+  var query = new AV.Query('Counter');//表名
+  query.notEqualTo('id',0); //id不为0的结果
+  query.descending('time'); //结果按阅读次数降序排序
+  query.limit(20);  //最终只返回10条结果
+  query.find().then(function (todo) {
+    for (var i=0;i<10;i++){ 
+      var result=todo[i].attributes;
+      time=result.time;  //阅读次数
+      title=result.title; //文章标题
+      url=result.url;     //文章url
+      var content="<p>"+"<font color='#0477ab'>"+"【阅读次数:"+time+"】"+"<a href='"+"http://thief.one"+url+"'>"+title+"</font>"+"</a>"+"</p>";
+      // document.write("<a href='"+"http://thief.one/"+url+"'>"+title+"</a>"+"    Readtimes:"+time+"<br>");
+      document.getElementById("heheda").innerHTML+=content
+    }
+  }, function (error) {
+    console.log("error");
+  });
+</script>
         
       </div>
       
